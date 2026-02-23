@@ -1,11 +1,17 @@
-<header>
-    <h1><a href="/">Blog</a></h1>
-</header>
+{% extends 'blog/base.html' %}
 
-{% for post in posts %}
-    <article>
-        <time>published: {{ post.published_date }}</time>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </article>
-{% endfor %}
+{% block content %}
+    {% for post in posts %}
+        <article class="card mb-4 border-0 shadow-sm post-card border-start border-4 border-{% cycle 'primary' 'success' 'info' 'warning' 'danger' %}">
+            <div class="card-body">
+                <small class="text-muted">{{ post.published_date }}</small>
+                <h2 class="card-title h5 mt-1">
+                    <a href="{% url 'post_detail' pk=post.pk %}" class="post-title-link">
+                        {{ post.title }}
+                    </a>
+                </h2>
+                <p class="card-text mb-0 text-secondary">{{ post.text|linebreaksbr }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock %}

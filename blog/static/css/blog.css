@@ -1,0 +1,43 @@
+/* Colorful blog – header, container, cards */
+
+.blog-body {
+    background: linear-gradient(180deg, #0c8ab5 0%, #751053 50%, #431801 100%);
+    min-height: 100vh;
+}
+
+.blog-header {
+    background: linear-gradient(135deg, #c25100 0%, #e85d04 40%, #dc2f02 100%);
+}
+
+.blog-header h1 {
+    font-family: 'Lobster', cursive;
+}
+
+.blog-header h1 a {
+    color: #57f246;
+    text-decoration: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+
+.blog-header h1 a:hover {
+    color: #57f246;
+    opacity: 0.95;
+}
+
+.blog-container {
+    background: rgba(242, 196, 32, 0.85);
+    border: 1px solid rgba(200, 81, 0, 0.15);
+}
+
+.post-card {
+    background: #20f6d2;
+}
+
+.post-title-link {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.post-title-link:hover {
+    color: #dc2f02;
+}
